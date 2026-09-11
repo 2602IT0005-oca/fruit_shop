@@ -1,4 +1,8 @@
+# app/config/routes.rb
+
 Rails.application.routes.draw do
+resources :products
+
   # 商品登録
   #get 'products/new'
   #post 'products', to: 'products#create'  # 登録
@@ -16,7 +20,6 @@ Rails.application.routes.draw do
   # 商品削除
   #delete 'products/:id', to: 'products#destroy', as: 'destroy_product'
 
-  resources :products
   # トップページ
   root to: "homes#top"
 
