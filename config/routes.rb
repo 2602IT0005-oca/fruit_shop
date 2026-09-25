@@ -1,6 +1,7 @@
 # app/config/routes.rb
 
 Rails.application.routes.draw do
+  get "mypage/show"
 resources :products
 
   # 商品登録
@@ -31,4 +32,8 @@ resources :products
 
   # Defines the root path route ("/")
   # root "posts#index"
+  devise_for :users
+
+  resources :mypage, only: [:show] # ユーザ情報の詳細表示
+
 end
